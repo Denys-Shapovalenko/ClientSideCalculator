@@ -19,7 +19,7 @@ html {
 
 /* Using box shadows to create 3D effects */
 #calculator {
-    width: 405px;
+    width: 398px;
     height: auto;
     margin: 100px auto;
     padding: 20px 20px 9px;
@@ -29,18 +29,24 @@ html {
     box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Top portion */
-.top span.clear {
-    float: left;
+#calculator-eng {
+    width: 770px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    background: #9dd2ea;
+    background: linear-gradient(#9dd2ea, #8bceec);
+    border-radius: 3px;
+    box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Inset shadow on the screen to create indent */
 .top .screen {
     height: 40px;
-    width: 358px;
+    width: 100%;
     float: left;
     padding: 0 0px;
-    margin: 0 0 6px;
+    margin-bottom: 11px;
     background: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
@@ -79,6 +85,8 @@ html {
         transition: all 0.2s ease;
     }
 
+        
+
         /* Remove right margins from operator keys */
         /* style different type of keys (operators/evaluate/clear) differently */
         .keys span.operator {
@@ -86,14 +94,23 @@ html {
             margin: 0 7px 11px 0;
         }
 
+        .keys span.right-key {
+            margin: 0 0px 11px 0;
+        }
+
         .keys span.doublehor {
-            width: 138px;
+            width: 139px;
         }
 
         .keys span.eval {
             background: #f1ff92;
             box-shadow: 0px 4px #9da853;
             color: #888e5f;
+        }
+
+        .keys span.empty {
+            cursor: default;
+            background: #9dd2ea;
         }
 
     .top span.clear {
@@ -107,6 +124,12 @@ html {
         background: #9c89f6;
         box-shadow: 0px 4px #6b54d3;
         color: white;
+    }
+
+    .keys span.empty:hover {
+        cursor: default;
+        box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+        background: #9dd2ea;
     }
 
     .keys span.eval:hover {
@@ -125,6 +148,12 @@ html {
     .keys span:active {
         box-shadow: 0px 0px #6b54d3;
         top: 4px;
+    }
+
+    .keys span.empty:active {
+        cursor: default;
+        box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+        background: #9dd2ea;
     }
 
     .keys span.eval:active {
